@@ -91,7 +91,8 @@ class Login
                         $this->errors[] = "Wrong password. Try again.";
                     }
                 } else {
-                    $this->errors[] = "This user does not exist.";
+                    // Displaying the user_name so that the user can avoid typing mistake in next attempt
+                    $this->errors[] = "This user ($user_name) does not exist.";
                 }
             } else {
                 $this->errors[] = "Database connection problem.";
